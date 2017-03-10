@@ -62,6 +62,28 @@ npm install --save-dev <package name> [<package version>]
 
 For more information and the *official* tutorial checkout (https://docs.npmjs.com/)
 
+### Using a Module (Either part of a Package or One We Created)
+
+To create the module you need to:
+
+1. Put your code in a seperate file
+2. At some point include **modules.export = ...** to choose what you
+   want to export.
+
+``` javascript
+var myLibrary = {...};
+
+module.exports = myLibrary;
+```
+
+To include you modules in another file/module:
+
+``` javascript
+var myCode = require('LOCATION OR NAME OF NPM PACKAGE')
+
+myCode.run()
+```
+
 ## Intro to Testing Theory
 
 We as developers are constantly need to adapt to changes in our
